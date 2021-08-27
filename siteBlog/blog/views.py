@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import PostSerializer
 
-from .models import Post
+from .models import Autor, Post
 
 @api_view(['GET'])
 def blogOverview(request):
@@ -13,7 +13,7 @@ def blogOverview(request):
     return Response(api_urls)
 
 @api_view(['GET'])
-def listPost(request):
+def listPosts(request):
     posts = Post.objects.all()
     serializer = PostSerializer(posts, many=True)
     return Response(serializer.data)
