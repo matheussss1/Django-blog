@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
+
+
 class Post(models.Model):
 
     opcao_status = [
@@ -11,7 +12,7 @@ class Post(models.Model):
 
     titulo = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, verbose_name="URL", unique=True)
-    autor = models.ForeignKey(User, on_delete=models.CASCADE)
+    autor = models.ForeignKey("blog.Autor", on_delete=models.CASCADE)
     body = models.TextField()
     criado = models.DateField(auto_now_add=True)
     atualizado = models.DateField(auto_now=True)
@@ -19,3 +20,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.titulo
+
+class Autor(models.Model):
+    nome = models.CharField(max_length=255, blank=False)
+
+    def __str__(self):
+        return self.nome
