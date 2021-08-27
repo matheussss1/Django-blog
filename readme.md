@@ -38,3 +38,8 @@ Se ao executar esse comando aparecer "venv" nas linhas do seu terminal, tudo oco
 Para rodar o projeto:
 
     $ python ./manage.py runserver
+
+Login admin:
+    
+    user : matheus
+    password: 1
