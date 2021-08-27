@@ -7,7 +7,8 @@ from .models import Post
 @api_view(['GET'])
 def blogOverview(request):
     api_urls = {
-        'List Posts': 'posts'
+        'List Posts': 'posts',
+        'Create Posts' : 'create-post'
     } 
     return Response(api_urls)
 
@@ -15,4 +16,13 @@ def blogOverview(request):
 def listPost(request):
     posts = Post.objects.all()
     serializer = PostSerializer(posts, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def createPost(request):
+    serializer = PostSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+
     return Response(serializer.data)
