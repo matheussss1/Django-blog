@@ -15,13 +15,13 @@ Projeto está sendo desenvolvido com o intuito de aprender python no ecossistema
 Caso você esteja no Windows talvez seja interessante rodar esse comando
 antes de tentar seguir os próximos passos:
     
-        $ Set-ExecutionPolicy Unrestricted -Scope Process
+    $ Set-ExecutionPolicy Unrestricted -Scope Process
 
 Vale notar que esse comando deve ser rodado toda vez após um novo
 processo de terminal ser executado
     Caso deseje deixar habilitado a execução de scripts direto utilize:
 
-        $ Set-ExecutionPolicy Unrestricted -Force
+    $ Set-ExecutionPolicy Unrestricted -Force
 
 Para mais informações sobre os comandos: [leia aqui.](https://stackoverflow.com/questions/18713086/virtualenv-wont-activate-on-windows/18713789)
 
