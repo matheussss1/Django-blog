@@ -39,6 +39,7 @@ E depois
 
     $ pip install django
     $ pip install rest_framework markdown django-filter
+    $ python -m pip install django-cors-headers
 
 
 Se ao executar esse comando aparecer "venv" nas linhas do seu terminal, tudo ocorreu corretamente!
