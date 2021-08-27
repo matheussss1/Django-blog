@@ -1,15 +1,30 @@
 const fetchAPI = async (url, options={}) => {
     const response = await fetch(url, options);
     const data = await response.json();
-    return data
+    return data;
 }
 
 const options = {
-    method: 'POST',
-    mode: 'no-cors',
-    body: {"username": 'matheus', "password": 1},
-    ContentType: 'application/json'
+    method: 'GET',
+    ContentType: 'application/json',
 }
 
-const data = fetchAPI('http://127.0.0.1:8000/api-login/', options)
-    .then(data => data)
+const data = fetchAPI('http://localhost:8000/api/posts/', options)
+    .then(data => {
+        console.log(data)
+        data.map(e => {
+            const status = e.status == 'R'? 'Rascunho' : 'Postado'
+            document.querySelector('.post').innerHTML += 
+            `
+                <tr>
+                    <td><a href="${e.slug}">${e.titulo}</a></td>
+                    <td>${e.autor}</td>
+                    <td>${e.criado}</td>
+                    <td>${e.atualizado}</td>
+                    <td>${status}</td>
+                </tr>
+            `
+        })
+    });
+
+    
