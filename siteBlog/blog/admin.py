@@ -5,5 +5,5 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ("titulo", "slug", "autor", "criado", "atualizado")
+    list_display = ("titulo", "slug", "autor", "criado", "atualizado","status")
     prepopulated_fields = {"slug" : ("titulo",)}
