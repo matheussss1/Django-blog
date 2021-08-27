@@ -27,11 +27,17 @@ Para mais informações sobre os comandos: [leia aqui.](https://stackoverflow.co
 
 Também é recomendado que tenha o django instalado
 
-    pip install django
-
-E então execute 
+E no Windows então execute 
 
     $ ./venv/Script/activate
+
+Caso esteja no linux execute
+
+    $ source ./venv/Script/activate
+
+E depois
+
+    $ pip install django
 
 Se ao executar esse comando aparecer "venv" nas linhas do seu terminal, tudo ocorreu corretamente!
 
