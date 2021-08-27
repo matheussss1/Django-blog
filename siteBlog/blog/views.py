@@ -1,9 +1,8 @@
-from django.shortcuts import render
-from django.http import JsonResponse
-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from .serializers import PostSerializer
 
+from .models import Post
 
 @api_view(['GET'])
 def blogOverview(request):
@@ -11,3 +10,9 @@ def blogOverview(request):
         'List Posts': 'posts'
     } 
     return Response(api_urls)
+
+@api_view(['GET'])
+def listPost(request):
+    posts = Post.objects.all()
+    serializer = PostSerializer(posts, many=True)
+    return Response(serializer.data)
