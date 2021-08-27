@@ -38,6 +38,8 @@ Caso esteja no linux execute
 E depois
 
     $ pip install django
+    $ pip install rest_framework markdown django-filter
+
 
 Se ao executar esse comando aparecer "venv" nas linhas do seu terminal, tudo ocorreu corretamente!
 
