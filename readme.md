@@ -46,6 +46,7 @@ Se ao executar esse comando aparecer "venv" nas linhas do seu terminal, tudo oco
 
 Para rodar o projeto:
 
+    $ cd siteBlog
     $ python ./manage.py runserver
 
 Login admin:
