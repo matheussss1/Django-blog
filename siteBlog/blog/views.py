@@ -1,6 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import PostSerializer
+from django.db.models import F
 
 from .models import Post
 
@@ -14,7 +15,7 @@ def blogOverview(request):
 
 @api_view(['GET'])
 def listPosts(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().select_related('autor')
     serializer = PostSerializer(posts, many=True)
     return Response(serializer.data)
 
