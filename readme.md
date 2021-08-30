@@ -52,4 +52,4 @@ Para rodar o projeto:
 Login admin:
     
     user : matheus
-    password: 1
+    password: 123
