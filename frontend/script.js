@@ -27,7 +27,7 @@ const open_modal_listener = () => {
                 const titulo = document.getElementById('modal__titulo');
                 overlay.style.display = 'block';
                 modal.style.display = 'block';
-                modal_content.innerHTML += data.body;
+                modal_content.innerHTML = data.body;
                 titulo.innerHTML = data.titulo; 
             })
         })
