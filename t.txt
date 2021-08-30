@@ -1,3 +1,0 @@
-Processo : Set-ExecutionPolicy Unrestricted -Scope Process
-Acionar : Set-ExecutionPolicy Unrestricted -Force
-Reverter : Set-ExecutionPolicy %the value the get-ExecutionPolicy command gave you% -Force
