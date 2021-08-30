@@ -38,7 +38,7 @@ Caso esteja no linux execute
 E depois
 
     $ pip install django
-    $ pip install rest_framework markdown django-filter
+    $ pip install django-rest_framework
     $ python -m pip install django-cors-headers
 
 
