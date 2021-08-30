@@ -44,10 +44,15 @@ E depois
 
 Se ao executar esse comando aparecer "venv" nas linhas do seu terminal, tudo ocorreu corretamente!
 
-Para rodar o projeto:
+Para rodar o backend:
 
     $ cd siteBlog
     $ python ./manage.py runserver
+
+Para acessar o front-end:
+
+    É necessario ter a extensão live-reload do VSCode instalada
+    Navegar até fronend/index.html, botão direito e 'Open with live-server'
 
 Login admin:
     
