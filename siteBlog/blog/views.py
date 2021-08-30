@@ -19,6 +19,12 @@ def listPosts(request):
     serializer = PostSerializer(posts, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def listPost(request, slug):
+    post = Post.objects.get(slug=slug)
+    serializer = PostSerializer(post)
+    return Response(serializer.data)
+
 @api_view(['POST'])
 def createPost(request):
     serializer = PostSerializer(data=request.data)
