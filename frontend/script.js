@@ -18,7 +18,7 @@ const data = fetchAPI('http://localhost:8000/api/posts/', options)
             `
                 <tr>
                     <td><a href="${e.slug}">${e.titulo}</a></td>
-                    <td>${e.autor}</td>
+                    <td>${e.autor['first_name']}</td>
                     <td>${e.criado}</td>
                     <td>${e.atualizado}</td>
                     <td>${status}</td>
