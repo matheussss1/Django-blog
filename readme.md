@@ -33,7 +33,7 @@ E no Windows então execute
 
 Caso esteja no linux execute
 
-    $ source ./venv/Script/activate
+    $ source ./venv/bin/activate
 
 E depois
 
