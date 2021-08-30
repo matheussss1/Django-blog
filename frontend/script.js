@@ -9,11 +9,6 @@ const options = {
     ContentType: 'application/json',
 }
 
-const open_modal_noticia = ({target}) => {
-    fetchAPI(`http://localhost:8000/post/${target.id}`, options)
-        .then(data => [data.body, data.titulo])
-}
-
 const open_modal_listener = () => {
     const elements = Array.from(document.querySelectorAll("a[id^='post#']"))
     elements.forEach(e => {
